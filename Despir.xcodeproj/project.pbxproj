@@ -18,6 +18,8 @@
 		006349A52F18E8F4006CD4D8 /* QuestionnaireTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006349A32F18E8F4006CD4D8 /* QuestionnaireTextView.swift */; };
 		006349A62F18E8F4006CD4D8 /* QuestionnaireReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006349A22F18E8F4006CD4D8 /* QuestionnaireReminderView.swift */; };
 		006349A72F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006349A12F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift */; };
+		006349AA2F18EDB2006CD4D8 /* ShipmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006349A92F18EDB2006CD4D8 /* ShipmentsViewModel.swift */; };
+		006349AD2F18EE24006CD4D8 /* ShipmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006349AC2F18EE24006CD4D8 /* ShipmentsModel.swift */; };
 		00694E2A2EF27B280008927D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00694E202EF27B280008927D /* LoginView.swift */; };
 		00694E2B2EF27B280008927D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00694E212EF27B280008927D /* SplashView.swift */; };
 		00694E2D2EF27B280008927D /* DespirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00694E272EF27B280008927D /* DespirApp.swift */; };
@@ -82,6 +84,8 @@
 		006349A12F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireDropdownView.swift; sourceTree = "<group>"; };
 		006349A22F18E8F4006CD4D8 /* QuestionnaireReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireReminderView.swift; sourceTree = "<group>"; };
 		006349A32F18E8F4006CD4D8 /* QuestionnaireTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireTextView.swift; sourceTree = "<group>"; };
+		006349A92F18EDB2006CD4D8 /* ShipmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentsViewModel.swift; sourceTree = "<group>"; };
+		006349AC2F18EE24006CD4D8 /* ShipmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentsModel.swift; sourceTree = "<group>"; };
 		00694DC92EF278950008927D /* Despir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Despir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00694DD82EF278970008927D /* DespirTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DespirTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00694DE22EF278970008927D /* DespirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DespirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +217,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		006349A82F18ED80006CD4D8 /* Shipments */ = {
+			isa = PBXGroup;
+			children = (
+				006349A92F18EDB2006CD4D8 /* ShipmentsViewModel.swift */,
+			);
+			path = Shipments;
+			sourceTree = "<group>";
+		};
+		006349AB2F18EE12006CD4D8 /* Shipments */ = {
+			isa = PBXGroup;
+			children = (
+				006349AC2F18EE24006CD4D8 /* ShipmentsModel.swift */,
+			);
+			path = Shipments;
+			sourceTree = "<group>";
+		};
 		00694DC02EF278950008927D = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				005F92FE2EF3CDD500315ED4 /* User */,
+				006349AB2F18EE12006CD4D8 /* Shipments */,
 				00D280FE2F14CE78005431BE /* Settings */,
 			);
 			path = Model;
@@ -287,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				00D875442EF92D300032D020 /* User */,
+				006349A82F18ED80006CD4D8 /* Shipments */,
 				002A94822F0FA98C008816B6 /* Settings */,
 			);
 			path = ViewModel;
@@ -529,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005F93052EF3D5CA00315ED4 /* HomeView.swift in Sources */,
+				006349AA2F18EDB2006CD4D8 /* ShipmentsViewModel.swift in Sources */,
 				00694E2A2EF27B280008927D /* LoginView.swift in Sources */,
 				005F93022EF3D3CF00315ED4 /* DataManager.swift in Sources */,
 				0069BA222F0D51CE0059A012 /* VerifyViewModel.swift in Sources */,
@@ -546,6 +569,7 @@
 				006349A42F18E8F4006CD4D8 /* QuestionnaireBoolView.swift in Sources */,
 				006349A52F18E8F4006CD4D8 /* QuestionnaireTextView.swift in Sources */,
 				006349A62F18E8F4006CD4D8 /* QuestionnaireReminderView.swift in Sources */,
+				006349AD2F18EE24006CD4D8 /* ShipmentsModel.swift in Sources */,
 				006349A72F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
 				EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */,

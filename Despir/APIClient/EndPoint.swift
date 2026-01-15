@@ -17,6 +17,8 @@ enum EndPoint: Equatable {
     case getRoles // Temp for get par in httpmethod
     case changePassword
     case updateProfile
+    case getOrders(page: Int, limit: Int , isDelivered: Bool, assignedToMe: Bool, sortOrder: String, orderBy: String)
+
     
     var endpoint: String {
         switch self {
@@ -38,7 +40,9 @@ enum EndPoint: Equatable {
             return "/user/reset_password"
         case .updateProfile:
           return "/user/update/\(DataManager.userUuid ?? "")"
-
+        case .getOrders(page: let page, limit: let limit, isDelivered: let is_delivered, assignedToMe: let assigned_to_me, sortOrder: let sortOrder, orderBy: let orderby):
+          return "/orders/get_orders?page=\(page)&limit=\(limit)&assigned_to_me=\(assigned_to_me)&sort_order=\(sortOrder)&orderby=\(orderby)"
+          
         }
     }
     
@@ -46,7 +50,7 @@ enum EndPoint: Equatable {
         switch self {
         case .login, .verifyMfa, .resendOtpMfa, .forgotPassword, .changePassword , .verifyOTP, .resetPassword, .updateProfile:
             return .POST
-        case .getRoles:
+        case .getRoles, .getOrders(page: _, limit: _, isDelivered: _, assignedToMe: _, sortOrder: _, orderBy: _):
             return .GET
         }
     }
