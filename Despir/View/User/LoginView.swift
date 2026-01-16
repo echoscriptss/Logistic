@@ -11,7 +11,7 @@ import ValidationManager
 
 struct LoginView: View {
     @EnvironmentObject var appRootManager: AppRootManager
-    @ObservedObject private var viewModel = LoginViewModel()
+    @StateObject private var viewModel = LoginViewModel()
     @State private var isEmailValid = true
     @State private var username = "yogeshwh@yopmail.com"
     //    @State private var username = "Prabwh@yopmail.com"
@@ -66,7 +66,6 @@ struct LoginView: View {
                     await viewModel.callLoginApi(email: username, password: password)
                     if viewModel.loginData != nil && viewModel.loginData?.statusCode == nil {
                         appRootManager.push(.verification)
-
                     }
                 }
             } label: {

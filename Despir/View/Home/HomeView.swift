@@ -10,10 +10,12 @@ import SwiftUI
 struct HomeView: View {
   @EnvironmentObject var appRootManager: AppRootManager
   @State private var isMenuOpen = false
+  @ObservedObject var viewModel = ShipmentsViewModel()
   
     var body: some View {
 
       VStack {
+        Spacer().frame(height: 50)
         Text("Home Screen")
           .font(.system(size: 36.0).bold())
         Spacer()
@@ -26,6 +28,7 @@ struct HomeView: View {
             Button("Change Password") {
               appRootManager.push(.changePassword)
             }
+          }
           Spacer()
           Button {
             DataManager.isUserLoggedIn = false
@@ -35,8 +38,14 @@ struct HomeView: View {
             Text("Logout")
             
           }
-          Spacer()
-        }
+        Spacer()
+          .onAppear(perform: {
+            Task {
+                await viewModel.callGetOrdersApi()
+                
+            }
+            
+          })
       
       .navigationDestination(for: Route.self) { route in
           if route == .changePassword {
