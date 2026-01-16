@@ -134,6 +134,16 @@ struct MainContainerView: View {
                 contentView
                 .blur(radius: isMenuOpen ? 2 : 0)
                 .animation(.easeInOut(duration: 0.25), value: isMenuOpen)
+              // Tap-capturing overlay
+                 if isMenuOpen {
+                     Color.black.opacity(0.001) // must NOT be 0
+                         .ignoresSafeArea()
+                         .onTapGesture {
+                             withAnimation {
+                                 isMenuOpen = false
+                             }
+                         }
+                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
