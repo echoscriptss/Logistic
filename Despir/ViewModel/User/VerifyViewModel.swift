@@ -14,7 +14,7 @@ class VerifyViewModel: ObservableObject {
   // MARK: - Variables
   
   var temporaryToken: String = String()
-  @Published var otp: String = String()
+  @Published var otp: [String] = Array(repeating: "", count: 6)
   @Published var errorMessage: String?
   @Published var showAlert: Bool = false
   @Published var verifyData: VerifyResponseModel?
@@ -26,7 +26,7 @@ class VerifyViewModel: ObservableObject {
   
   func callVerifyApi() async {
     
-    let inputData = VerifyInputModel(temporaryToken: temporaryToken, otp: otp)
+    let inputData = VerifyInputModel(temporaryToken: temporaryToken, otp: otp.joined())
         do {
           verifyData = try await APIManager.shared.request(url: EndPoint.verifyMfa.url, methodType: EndPoint.verifyMfa.httpMethod.rawValue, body: inputData, responseType: VerifyResponseModel.self)
           if verifyData?.statusCode != nil {
