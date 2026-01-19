@@ -35,31 +35,29 @@ struct LoginView: View {
                     }
                 }
             Spacer()
-            TextField("Username", text: $username)
-                .textInputAutocapitalization(.none)
-                .autocorrectionDisabled()
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding([.leading,.trailing],10)
-                .onChange(of: username) { _, newValue in
-                    isEmailValid = newValue.isEmpty
-                        ? true
-                        : emailValidator.isValid(email: newValue)
-                }
-            if !isEmailValid {
-                Text("Please enter a valid email address")
-                    .foregroundColor(.red)
-                    .font(.caption)
-                    .padding(.leading, 10)
-            }
-
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding([.leading,.trailing],10)
+          HStack {
+            Spacer().frame(width: 20)
+            CustomTestField(title: "Email *", icon: AppIcons.email, text: $username, isValid: $isEmailValid)
+              .onChange(of: username) { _, newValue in
+                isEmailValid = newValue.isEmpty
+                ? true
+                : emailValidator.isValid(email: newValue)
+              }
+            Spacer().frame(width: 20)
+          }
+//            if !isEmailValid {
+//              Text("Please enter a valid email address")
+//                .foregroundColor(.red)
+//                .font(.caption)
+//                .padding(.leading, 10)
+//            }
             
+            SecureField("Password", text: $password)
+              .padding()
+              .background(Color(.systemGray6))
+              .cornerRadius(8)
+              .padding([.leading,.trailing],10)
+         
             // Login button
             AsyncActionButton {
                 Task {
@@ -117,9 +115,6 @@ struct LoginView: View {
     }
 
 }
-
-
-
 
 #Preview {
     LoginView()

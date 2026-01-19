@@ -38,6 +38,8 @@
 		008195382F0BF98000B2C837 /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = 008195372F0BF98000B2C837 /* APIManager */; };
 		00C843022F0E274F0020587D /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C843012F0E274F0020587D /* VerifyView.swift */; };
 		00CEB54E2F1E0A2200AEC660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CEB54D2F1E0A2200AEC660 /* AppDelegate.swift */; };
+		00CEB55C2F1E6CE300AEC660 /* CustomTestField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CEB55B2F1E6CE300AEC660 /* CustomTestField.swift */; };
+		00CEB55E2F1E6E2300AEC660 /* AppIconsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CEB55D2F1E6E2300AEC660 /* AppIconsConstants.swift */; };
 		00D280F12F14CC01005431BE /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280EF2F14CC01005431BE /* ResetPasswordViewModel.swift */; };
 		00D280F22F14CC01005431BE /* VerifyOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280F02F14CC01005431BE /* VerifyOTPViewModel.swift */; };
 		00D280F52F14CC48005431BE /* VerifyOTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280F42F14CC48005431BE /* VerifyOTPModel.swift */; };
@@ -102,6 +104,8 @@
 		007F1FC72F1614FE00604DD1 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		00C843012F0E274F0020587D /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
 		00CEB54D2F1E0A2200AEC660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00CEB55B2F1E6CE300AEC660 /* CustomTestField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTestField.swift; sourceTree = "<group>"; };
+		00CEB55D2F1E6E2300AEC660 /* AppIconsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppIconsConstants.swift; path = Despir/SupportingFiles/Constants/AppIconsConstants.swift; sourceTree = SOURCE_ROOT; };
 		00D280EF2F14CC01005431BE /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		00D280F02F14CC01005431BE /* VerifyOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewModel.swift; sourceTree = "<group>"; };
 		00D280F32F14CC48005431BE /* ResetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordModel.swift; sourceTree = "<group>"; };
@@ -265,18 +269,10 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		00694E1E2EF27B280008927D /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		00694E1F2EF27B280008927D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				0081951E2F0BBB5B00B2C837 /* Extentsions */,
-				00694E1E2EF27B280008927D /* Constants */,
+				00CEB5602F1E6E9C00AEC660 /* Constants */,
 				00694E302EF27B930008927D /* Utilities */,
 			);
 			path = SupportingFiles;
@@ -351,11 +347,12 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
-		0081951E2F0BBB5B00B2C837 /* Extentsions */ = {
+		00CEB5602F1E6E9C00AEC660 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				00CEB55D2F1E6E2300AEC660 /* AppIconsConstants.swift */,
 			);
-			path = Extentsions;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		00D280FE2F14CE78005431BE /* Settings */ = {
@@ -394,6 +391,7 @@
 				006349A12F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift */,
 				006349A22F18E8F4006CD4D8 /* QuestionnaireReminderView.swift */,
 				006349A32F18E8F4006CD4D8 /* QuestionnaireTextView.swift */,
+				00CEB55B2F1E6CE300AEC660 /* CustomTestField.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -557,6 +555,7 @@
 				006349AA2F18EDB2006CD4D8 /* ShipmentsViewModel.swift in Sources */,
 				00694E2A2EF27B280008927D /* LoginView.swift in Sources */,
 				005F93022EF3D3CF00315ED4 /* DataManager.swift in Sources */,
+				00CEB55E2F1E6E2300AEC660 /* AppIconsConstants.swift in Sources */,
 				0069BA222F0D51CE0059A012 /* VerifyViewModel.swift in Sources */,
 				00D875432EF914690032D020 /* EndPoint.swift in Sources */,
 				00694E2B2EF27B280008927D /* SplashView.swift in Sources */,
@@ -572,6 +571,7 @@
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				006349A42F18E8F4006CD4D8 /* QuestionnaireBoolView.swift in Sources */,
 				006349A52F18E8F4006CD4D8 /* QuestionnaireTextView.swift in Sources */,
+				00CEB55C2F1E6CE300AEC660 /* CustomTestField.swift in Sources */,
 				006349A62F18E8F4006CD4D8 /* QuestionnaireReminderView.swift in Sources */,
 				006349AD2F18EE24006CD4D8 /* ShipmentsModel.swift in Sources */,
 				006349A72F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift in Sources */,
