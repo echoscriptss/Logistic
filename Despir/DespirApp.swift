@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct DespirApp: App {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
   @StateObject private var appRootManager = AppRootManager()
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
