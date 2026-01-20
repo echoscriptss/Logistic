@@ -1,3 +1,26 @@
+
+
+//ShipmentF Filter Model
+struct ShipmentFilterModel: Encodable {
+  let page: Int = 1
+  let limit: Int = 25
+  let isDelivered: Bool = false
+  let assignedToMe: Bool = true
+  let sortOrder: String = ""
+  let orderBy: String = ""
+  let customer: String = ""
+  let carrier: String = ""
+  let enteredBy: String = ""
+  let dispatcher: String = ""
+  let pickupStart: String = ""
+  let pickupEnd: String = ""
+  let deliveryStart: String = ""
+  let deliveryEnd: String = ""
+  let orderType: String = ""
+  let scheduleEarlyDate: String = ""
+  let tsa: Bool = false
+}
+
 final class OrdersResponseModel: Codable {
 
     let success: Bool?
