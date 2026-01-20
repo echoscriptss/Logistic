@@ -110,7 +110,9 @@ struct CustomSecureTestField: View {
                 Button {
                   isSecure = !isSecure
                 } label: {
-                  Image(isSecure ? AppIcons.eye: AppIcons.eye)
+                  Text(isSecure ? "SHOW" : "HIDE")
+                    .foregroundColor( .black.opacity(0.6))
+                  //Image(isSecure ? AppIcons.eye: AppIcons.eye)
                 }
                 Spacer().frame(width: 12)
               }
