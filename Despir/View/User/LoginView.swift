@@ -37,7 +37,7 @@ struct LoginView: View {
             Spacer()
           HStack {
             Spacer().frame(width: 20)
-            CustomTestField(title: "Email *", icon: AppIcons.email, text: $username, isValid: $isEmailValid)
+            CustomTestField(title: " Email * ", icon: AppIcons.email, text: $username, isValid: $isEmailValid)
               .onChange(of: username) { _, newValue in
                 isEmailValid = newValue.isEmpty
                 ? true
@@ -45,19 +45,11 @@ struct LoginView: View {
               }
             Spacer().frame(width: 20)
           }
-//            if !isEmailValid {
-//              Text("Please enter a valid email address")
-//                .foregroundColor(.red)
-//                .font(.caption)
-//                .padding(.leading, 10)
-//            }
-            
-            SecureField("Password", text: $password)
-              .padding()
-              .background(Color(.systemGray6))
-              .cornerRadius(8)
-              .padding([.leading,.trailing],10)
-         
+          HStack {
+            Spacer().frame(width: 20)
+            CustomSecureTestField(title: " Password ", icon: AppIcons.password, text: $password, isValid: .constant(true))
+            Spacer().frame(width: 20)
+          }
             // Login button
             AsyncActionButton {
                 Task {

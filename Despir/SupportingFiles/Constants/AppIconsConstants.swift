@@ -12,5 +12,6 @@ enum AppIcons {
   static let eyeOnItLogo = "eyeOnItLogo"
   static let email = "email"
   static let password = "password"
-
+  static let eye = "eye"
+  
 }
