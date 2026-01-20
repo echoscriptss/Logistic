@@ -21,7 +21,8 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            Text("Login")
+          Spacer().frame(height: 100)
+          Image(AppIcons.eyeOnItLogo)
                 .font(.system(size: 36.0).bold())
                 .contextMenu {
                     Button("Dev") {
@@ -50,36 +51,29 @@ struct LoginView: View {
             CustomSecureTestField(title: " Password ", icon: AppIcons.password, text: $password, isValid: .constant(true))
             Spacer().frame(width: 20)
           }
-            // Login button
+         
             AsyncActionButton {
-                Task {
-                    await viewModel.callLoginApi(email: username, password: password)
-                    if viewModel.loginData != nil && viewModel.loginData?.statusCode == nil {
-                        appRootManager.push(.verification)
-                    }
+              Task {
+                await viewModel.callLoginApi(email: username, password: password)
+                if viewModel.loginData != nil && viewModel.loginData?.statusCode == nil {
+                  appRootManager.push(.verification)
                 }
+              }
             } label: {
-                Text("Login Press")
-                    .frame(maxWidth: .infinity)
+              Text("SignIn")
             }
-            .frame(height: 44)
             .disabled(!isEmailValid || username.isEmpty)
             .opacity(isEmailValid && !username.isEmpty ? 1 : 0.5)
-
-            .alert("Error", isPresented: $viewModel.showAlert) {
-                Button("OK", role: .cancel) { }
-            } message: {
-                Text(viewModel.errorMessage ?? "")
-            }
-            
+          
             // Forgot password
-            AsyncActionButton {
-                appRootManager.push(.forgotPassword)
-            } label: {
-                Text("Forgot Password")
-                    .frame(maxWidth: .infinity)
-            }
-            .frame(height: 44)
+          Button {
+            appRootManager.push(.forgotPassword)
+          } label: {
+            Text("Forgot Password?")
+              .underline()
+              .foregroundColor(.black.opacity(0.6))
+          }
+          
             .alert("Error", isPresented: $viewModel.showAlert) {
                 Button("OK", role: .cancel) { }
             } message: {

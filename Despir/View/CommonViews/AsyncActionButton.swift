@@ -10,24 +10,27 @@ struct AsyncActionButton<Label: View>: View {
     let action: () async -> Void
     let label: () -> Label
 
-    @State private var isLoading = false
 
     var body: some View {
+      HStack {
+        Spacer().frame(width: 20)
         Button {
-            Task {
-                isLoading = true
-                await action()
-                isLoading = false
-            }
+          Task {
+            await action()
+          }
         } label: {
-            ZStack {
-                if isLoading {
-                    ProgressView()
-                } else {
-                    label()
-                }
-            }
-        }
-        .disabled(isLoading)
+          HStack {
+            Spacer()
+            label()
+              .foregroundColor(.white)
+            Spacer()
+          }
+        }  .frame(height: 50)
+          .background(Color.black.opacity(0.6))
+          .cornerRadius(8)
+        Spacer().frame(width: 20)
+      }
+    
+        
     }
 }

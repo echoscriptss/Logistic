@@ -42,9 +42,7 @@ struct HomeView: View {
           .onAppear(perform: {
             Task {
                 await viewModel.callGetOrdersApi()
-                
             }
-            
           })
       
       .navigationDestination(for: Route.self) { route in
@@ -54,9 +52,7 @@ struct HomeView: View {
             ProfileView()
           }
       }
-
     }
-    
   }
 }
 

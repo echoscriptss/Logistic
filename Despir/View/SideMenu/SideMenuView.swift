@@ -150,7 +150,7 @@ struct MainContainerView: View {
                     Button {
                         isMenuOpen.toggle()
                     } label: {
-                        Image(systemName: "line.3.horizontal")
+                      Image(AppIcons.sideMenu)
                     }
                 }
             }

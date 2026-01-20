@@ -13,5 +13,8 @@ enum AppIcons {
   static let email = "email"
   static let password = "password"
   static let eye = "eye"
-  
+  static let home = "home"
+  static let sideMenu = "sideMenu"
+  static let settings = "settings"
+  static let logout = "logout"
 }
