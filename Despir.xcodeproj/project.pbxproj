@@ -48,6 +48,7 @@
 		00D280FB2F14CCC8005431BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280FA2F14CCC8005431BE /* ProfileView.swift */; };
 		00D280FD2F14CD45005431BE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280FC2F14CD45005431BE /* ProfileViewModel.swift */; };
 		00D281002F14CE8A005431BE /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D280FF2F14CE8A005431BE /* ProfileModel.swift */; };
+		00D739442F20A08F00F594EA /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D739432F20A08F00F594EA /* CustomTabbar.swift */; };
 		00D875432EF914690032D020 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D875422EF914690032D020 /* EndPoint.swift */; };
 		00D875462EF92D450032D020 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D875452EF92D450032D020 /* LoginViewModel.swift */; };
 		EC9BD2842F0E6E1700B4611A /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = EC9BD2832F0E6E1700B4611A /* APIManager */; };
@@ -113,6 +114,7 @@
 		00D280FA2F14CCC8005431BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		00D280FC2F14CD45005431BE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		00D280FF2F14CE8A005431BE /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		00D739432F20A08F00F594EA /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		00D875422EF914690032D020 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		00D875452EF92D450032D020 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EC9BD2852F0E720C00B4611A /* AsyncActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncActionButton.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 			children = (
 				EC9BD2872F0E83D100B4611A /* CommonViews */,
 				00694E222EF27B280008927D /* User */,
+				00D739422F20A07500F594EA /* Tabbar */,
 				007F1FC62F1614E500604DD1 /* SideMenu */,
 				005F93032EF3D5B500315ED4 /* Home */,
 				002A947F2F0FA799008816B6 /* Settings */,
@@ -361,6 +364,14 @@
 				00D280FF2F14CE8A005431BE /* ProfileModel.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		00D739422F20A07500F594EA /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				00D739432F20A08F00F594EA /* CustomTabbar.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		00D86BF02EF5229100B8EC92 /* APIClient */ = {
@@ -587,6 +598,7 @@
 				002A94862F0FAC10008816B6 /* ChangePasswordModel.swift in Sources */,
 				00D280F12F14CC01005431BE /* ResetPasswordViewModel.swift in Sources */,
 				00D280F22F14CC01005431BE /* VerifyOTPViewModel.swift in Sources */,
+				00D739442F20A08F00F594EA /* CustomTabbar.swift in Sources */,
 				00694E342EF27BB80008927D /* AppRootManager.swift in Sources */,
 				0069BA242F0D52370059A012 /* VerifyModel.swift in Sources */,
 				EC9BD28D2F0EB44400B4611A /* ForgotPassword.swift in Sources */,
