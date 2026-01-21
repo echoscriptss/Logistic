@@ -12,6 +12,8 @@ import SwiftData
 struct DespirApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
   @StateObject private var appRootManager = AppRootManager()
+  @StateObject private var tabBarController = TabBarController()
+  
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             UserModel.self,
@@ -31,6 +33,7 @@ struct DespirApp: App {
     }
     .modelContainer(sharedModelContainer)
     .environmentObject(appRootManager)
+    .environmentObject(tabBarController)
   }
 }
 
@@ -50,7 +53,7 @@ struct ApplicationSwitcher: View {
       case .mainView:
         
         NavigationStack(path: $appRootManager.path) {
-          MainContainerView()
+          MainTabView()
         }
 //      case .forgotPassword:
 //        NavigationStack(path: $appRootManager.path) {
