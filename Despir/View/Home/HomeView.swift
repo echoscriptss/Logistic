@@ -41,7 +41,7 @@ struct HomeView: View {
         Spacer()
           .onAppear(perform: {
             Task {
-                await viewModel.callGetOrdersApi()
+                await viewModel.callGetFiltersApi()
             }
           })
       
