@@ -17,6 +17,7 @@ final class AppRootManager: ObservableObject {
         case splash
         case login
         case mainView
+        case filterCalender
     }
 
      func push(_ route: Route) {
@@ -41,4 +42,5 @@ enum Route: Hashable {
     case resetPassword
     case settings
     case profile
+    case filterCalender
 }
