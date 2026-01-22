@@ -37,6 +37,14 @@ struct HomeView: View {
             
           }
         Spacer()
+          Button {
+              appRootManager.currentRoot = .filterCalender
+          } label: {
+            Text("Calender")
+            
+          }
+        Spacer()
+
           .onAppear(perform: {
             Task {
                 await viewModel.callGetFiltersApi()
@@ -46,7 +54,9 @@ struct HomeView: View {
       .navigationDestination(for: Route.self) { route in
           if route == .changePassword {
               ChangePasswordView()
-          } else if route == .profile {
+          }else if route == .filterCalender {
+              FilterCalnderHostView()
+          }else if route == .profile {
             ProfileView()
           }
       }
