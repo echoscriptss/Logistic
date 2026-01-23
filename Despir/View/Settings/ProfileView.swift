@@ -13,9 +13,8 @@ struct ProfileView: View {
   @ObservedObject private var viewModel = ProfileViewModel()
     var body: some View {
       VStack {
-        Text("Profile")
-          .font(.system(size: 36.0).bold())
-          .padding(.bottom,40)
+        CustomNavigationBar(title: "UPDATE PROFILE", showBack: true)
+        Spacer()
         TextField("First Name", text: $viewModel.firstName)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
@@ -53,7 +52,7 @@ struct ProfileView: View {
                 .frame(maxWidth: .infinity)
         }
         .frame(height: 44)
-
+        Spacer()
       }
       .alert(viewModel.isSuccess ? "Success" : "Error", isPresented: $viewModel.showAlert) {
           Button("OK", role: .cancel) {

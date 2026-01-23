@@ -29,6 +29,7 @@
 		00694E382EF280270008927D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00694E372EF280270008927D /* LaunchScreen.storyboard */; };
 		0069BA222F0D51CE0059A012 /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069BA212F0D51CE0059A012 /* VerifyViewModel.swift */; };
 		0069BA242F0D52370059A012 /* VerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069BA232F0D52370059A012 /* VerifyModel.swift */; };
+		006C2D082F22210800A86BA5 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C2D072F22210800A86BA5 /* CustomNavigationBar.swift */; };
 		007F1FC82F1614FE00604DD1 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007F1FC72F1614FE00604DD1 /* SideMenuView.swift */; };
 		008195242F0BDC1900B2C837 /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = 008195232F0BDC1900B2C837 /* APIManager */; };
 		008195262F0BDCA400B2C837 /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = 008195252F0BDCA400B2C837 /* APIManager */; };
@@ -103,6 +104,7 @@
 		00694E372EF280270008927D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0069BA212F0D51CE0059A012 /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		0069BA232F0D52370059A012 /* VerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModel.swift; sourceTree = "<group>"; };
+		006C2D072F22210800A86BA5 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		007F1FC72F1614FE00604DD1 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		00C843012F0E274F0020587D /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
 		00CEB54D2F1E0A2200AEC660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				006349A22F18E8F4006CD4D8 /* QuestionnaireReminderView.swift */,
 				006349A32F18E8F4006CD4D8 /* QuestionnaireTextView.swift */,
 				00CEB55B2F1E6CE300AEC660 /* CustomTestField.swift */,
+				006C2D072F22210800A86BA5 /* CustomNavigationBar.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				005F93022EF3D3CF00315ED4 /* DataManager.swift in Sources */,
 				00CEB55E2F1E6E2300AEC660 /* AppIconsConstants.swift in Sources */,
 				0069BA222F0D51CE0059A012 /* VerifyViewModel.swift in Sources */,
+				006C2D082F22210800A86BA5 /* CustomNavigationBar.swift in Sources */,
 				00D875432EF914690032D020 /* EndPoint.swift in Sources */,
 				00694E2B2EF27B280008927D /* SplashView.swift in Sources */,
 				00D280FD2F14CD45005431BE /* ProfileViewModel.swift in Sources */,

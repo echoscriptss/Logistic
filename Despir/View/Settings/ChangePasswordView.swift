@@ -14,11 +14,12 @@ struct ChangePasswordView: View {
   @ObservedObject private var viewModel = ChangePasswordVM()
   @State private var passwordMessage = String()
     var body: some View {
+      
       VStack {
-        Text("Change Password")
-            .font(.system(size: 36.0).bold())
-            .padding(.bottom,40)
-        
+        CustomNavigationBar(title: "Change Password") {
+          appRootManager.pop()
+        }
+        Spacer()
         SecureField("Old Password", text: $viewModel.oldPassword)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
@@ -72,6 +73,7 @@ struct ChangePasswordView: View {
         .onChange(of: viewModel.password) { _, newValue in
           passwordMessage = PasswordValidator().validate(password: newValue).message
         }
+        Spacer()
       }
     }
 }
