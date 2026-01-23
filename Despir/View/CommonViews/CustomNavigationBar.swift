@@ -52,6 +52,7 @@ struct CustomNavigationBar: View {
         .overlay(
             Divider(), alignment: .bottom
         )
+        .navigationBarHidden(true)
     }
 }
 #Preview {

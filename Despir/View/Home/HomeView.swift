@@ -15,9 +15,7 @@ struct HomeView: View {
     var body: some View {
 
       VStack {
-        Spacer().frame(height: 50)
-        Text("Home Screen")
-          .font(.system(size: 36.0).bold())
+        CustomNavigationBar(title: "SHIPMENTS", showBack: false)
         Spacer()
         Text("Long press for settings")
           .font(.system(size: 20.0).bold())

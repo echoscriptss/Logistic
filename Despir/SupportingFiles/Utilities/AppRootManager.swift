@@ -24,7 +24,7 @@ final class AppRootManager: ObservableObject {
      }
 
      func pop() {
-       if path.count > 1 {
+       if path.count > 0 {
          path.removeLast()
        }
      }
