@@ -55,10 +55,9 @@ struct ApplicationSwitcher: View {
         NavigationStack(path: $appRootManager.path) {
           MainTabView()
         }
-//      case .forgotPassword:
-//        NavigationStack(path: $appRootManager.path) {
-//         // ForgotPasswordView()
-//        }
+
+      case .filterCalender:
+          DateSelectionView()
       }
     }
 }
