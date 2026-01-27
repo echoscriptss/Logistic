@@ -8,13 +8,18 @@
 import Foundation
 
 enum AppIcons {
-  
   static let eyeOnItLogo = "eyeOnItLogo"
   static let email = "email"
   static let password = "password"
   static let eye = "eye"
-  static let home = "home"
+  static let dashboard = "dashboard"
+  static let dashboardSelected = "dashboardSelected"
+  static let accounts = "accounts"
   static let sideMenu = "sideMenu"
-  static let settings = "settings"
   static let logout = "logout"
+  static let navLogo = "navLogo"
+  static let shipments = "shipments"
+  static let shipmentsSelected = "shipmentsSelected"
+  static let notifications = "notifications"
+  static let filter = "filter"
 }

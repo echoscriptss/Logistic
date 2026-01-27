@@ -11,14 +11,18 @@ struct CustomNavigationBar: View {
     
     let title: String
     var showBack: Bool = true
+    var showLogo: Bool = false
     var onBack: (() -> Void)? = nil
     var rightView: AnyView? = nil
 
     var body: some View {
         HStack {
-            
-            // Back Button
-            if showBack {
+          if showLogo {
+            Image(AppIcons.navLogo) // your asset name
+              .resizable()
+              .scaledToFit()
+              .frame(height: 22)
+          } else if showBack {
                 Button(action: {
                     onBack?()
                 }) {

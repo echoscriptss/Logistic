@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HomeView: View {
+struct Dashboard: View {
     
     @EnvironmentObject var appRootManager: AppRootManager
     @ObservedObject var viewModel = ShipmentsViewModel()
@@ -8,25 +8,19 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             
-            // 🔹 MAIN CONTENT (Never moves)
-            VStack {
-                Spacer().frame(height: 50)
-                
-                Text("Home Screen")
-                    .font(.system(size: 36).bold())
-                
-                Spacer()
-                
-                Text("Long press for settings")
-                    .font(.system(size: 20).bold())
-                    .contextMenu {
-                        Button("Update Profile") {
-                            appRootManager.push(.profile)
-                        }
-                        Button("Change Password") {
-                            appRootManager.push(.changePassword)
-                        }
-                    }
+          VStack {
+            CustomNavigationBar(title: "Shipments Assigned", showBack: false, showLogo: true)
+            Spacer()
+            Text("Long press for settings")
+              .font(.system(size: 20.0).bold())
+              .contextMenu {
+                Button("Update Profile") {
+                  appRootManager.push(.profile)
+                }
+                Button("Change Password") {
+                  appRootManager.push(.changePassword)
+                }
+              }
                 
                 Spacer()
                 
@@ -59,6 +53,8 @@ struct HomeView: View {
                             ProfileView()
                         }
                     }
+
+
             }
             
         }

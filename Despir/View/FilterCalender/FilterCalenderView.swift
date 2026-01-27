@@ -127,7 +127,7 @@ extension FilterCalenderView {
                             .background(Color.gray.opacity(0.1))
                             .cornerRadius(8)
                             .frame(width: 80)
-                            .onChange(of: hourText) { newValue in
+                            .onChange(of: hourText) {_, newValue in
                                 hourText = validateTimeInput(newValue, range: 0...23)
                             }
                     }
@@ -145,7 +145,7 @@ extension FilterCalenderView {
                             .background(Color.gray.opacity(0.1))
                             .cornerRadius(8)
                             .frame(width: 80)
-                            .onChange(of: minuteText) { newValue in
+                            .onChange(of: minuteText) {_, newValue in
                                 minuteText = validateTimeInput(newValue, range: 0...59)
                             }
                     }
