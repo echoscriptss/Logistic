@@ -21,4 +21,5 @@ enum AppIcons {
   static let shipments = "shipments"
   static let shipmentsSelected = "shipmentsSelected"
   static let notifications = "notifications"
+  static let filter = "filter"
 }

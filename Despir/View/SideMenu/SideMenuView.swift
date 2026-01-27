@@ -166,7 +166,7 @@ struct MainContainerView: View {
     private var contentView: some View {
         switch selectedScreen {
         case .home:
-            HomeView()
+            Dashboard()
         case .profile:
             ProfileView()
         case .changePassword:

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HomeView: View {
+struct Dashboard: View {
     
     @EnvironmentObject var appRootManager: AppRootManager
     @ObservedObject var viewModel = ShipmentsViewModel()

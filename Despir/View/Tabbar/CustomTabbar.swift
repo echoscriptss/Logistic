@@ -31,11 +31,32 @@ enum Tab: String, CaseIterable {
       case .accounts: return AppIcons.accounts
       }
   }
+  
+  var supportsBadge: Bool {
+        self == .notifications
+    }
+}
+
+struct BadgeView: View {
+    let count: Int
+
+    var body: some View {
+        if count > 0 {
+            Text(count > 99 ? "99+" : "\(count)")
+              .font(.system(size: 10, weight: .bold))
+              .foregroundColor(.white)
+              .padding(5)
+              .background(Color.red)
+              .clipShape(Capsule())
+              .offset(x: 10, y: -8)
+        }
+    }
 }
 
 struct CustomTabbar: View {
   
   @Binding var selectedTab: Tab
+  var notificationCount: Int = 0
 
      var body: some View {
          HStack {
@@ -44,9 +65,18 @@ struct CustomTabbar: View {
                VStack {
                  Spacer().frame(height: 10)
                    VStack(spacing: 4) {
-                     Image(selectedTab == tab ? tab.selectedIcon : tab.icon)
-                       .font(.system(size: 22))
-                     
+                     ZStack(alignment: .topTrailing) {
+                       
+                       Image(selectedTab == tab ? tab.selectedIcon : tab.icon)
+                         .font(.system(size: 22))
+                       
+                       if tab.supportsBadge {
+                           BadgeView(count: notificationCount)
+                           .alignmentGuide(.trailing) { d in
+                                           d[.trailing] - 2
+                                       }
+                       }
+                     }
                      Text(tab.rawValue)
                        .font(.system(size: 12))
                    }
@@ -71,28 +101,31 @@ struct MainTabView: View {
 
     @State private var selectedTab: Tab = .dashboard
     @EnvironmentObject var tabBarController: TabBarController
+    @State private var notificationCount = 5 // dynamic
   
     var body: some View {
         VStack(spacing: 0) {
             ZStack {
                 switch selectedTab {
                 case .dashboard:
-                    HomeView()
+                    Dashboard()
                 case .shipments:
-                    ChangePasswordView()
+                    ShipmentsView()
                 case .notifications:
-                    ChangePasswordView()
+                    NotificationsView()
+                    .onAppear {
+                      notificationCount = 0 // clear badge
+                    }
                 case .accounts:
-                    ChangePasswordView()
+                    AccountView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
           if !tabBarController.isHidden {
             Divider()
-            CustomTabbar(selectedTab: $selectedTab)
+            CustomTabbar(selectedTab: $selectedTab, notificationCount: notificationCount)
           }
-           
         }
     }
 }

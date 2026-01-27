@@ -167,8 +167,8 @@ struct ButtonFrameKey: PreferenceKey {
 }
 
 // MARK: - Preview
-struct HomeView_Previews: PreviewProvider {
+struct Dashboard_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        Dashboard()
     }
 }
