@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "u_home-alt.png",
+      "filename" : "nav_logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "u_home-alt@2x.png",
+      "filename" : "nav_logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "u_home-alt@3x.png",
+      "filename" : "nav_logo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
 
       VStack {
-        CustomNavigationBar(title: "SHIPMENTS", showBack: false)
+        CustomNavigationBar(title: "Shipments Assigned", showBack: false, showLogo: true)
         Spacer()
         Text("Long press for settings")
           .font(.system(size: 20.0).bold())
