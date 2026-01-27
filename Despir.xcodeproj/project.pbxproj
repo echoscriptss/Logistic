@@ -53,9 +53,8 @@
 		00D7394C2F20E85100F594EA /* ShipmentFilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D7394B2F20E85100F594EA /* ShipmentFilterModel.swift */; };
 		00D875432EF914690032D020 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D875422EF914690032D020 /* EndPoint.swift */; };
 		00D875462EF92D450032D020 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D875452EF92D450032D020 /* LoginViewModel.swift */; };
-		6573194B2F223662001785CB /* CalenderDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657319492F223662001785CB /* CalenderDatePickerView.swift */; };
-		6573194D2F223662001785CB /* FilterCalnderHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573194A2F223662001785CB /* FilterCalnderHostView.swift */; };
 		6573194F2F223696001785CB /* FilterCalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573194E2F223696001785CB /* FilterCalenderView.swift */; };
+		65916EED2F23BC07004CA035 /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65916EEC2F23BBF8004CA035 /* DateSelectionView.swift */; };
 		EC9BD2842F0E6E1700B4611A /* APIManager in Frameworks */ = {isa = PBXBuildFile; productRef = EC9BD2832F0E6E1700B4611A /* APIManager */; };
 		EC9BD2862F0E721A00B4611A /* AsyncActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BD2852F0E720C00B4611A /* AsyncActionButton.swift */; };
 		EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9BD2882F0E842500B4611A /* ForgotPasswordViewModel.swift */; };
@@ -124,9 +123,8 @@
 		00D7394B2F20E85100F594EA /* ShipmentFilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentFilterModel.swift; sourceTree = "<group>"; };
 		00D875422EF914690032D020 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		00D875452EF92D450032D020 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		657319492F223662001785CB /* CalenderDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDatePickerView.swift; sourceTree = "<group>"; };
-		6573194A2F223662001785CB /* FilterCalnderHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCalnderHostView.swift; sourceTree = "<group>"; };
 		6573194E2F223696001785CB /* FilterCalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCalenderView.swift; sourceTree = "<group>"; };
+		65916EEC2F23BBF8004CA035 /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
 		EC9BD2852F0E720C00B4611A /* AsyncActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncActionButton.swift; sourceTree = "<group>"; };
 		EC9BD2882F0E842500B4611A /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		EC9BD28A2F0E84A800B4611A /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
@@ -409,8 +407,7 @@
 		657319472F223649001785CB /* FilterCalender */ = {
 			isa = PBXGroup;
 			children = (
-				6573194A2F223662001785CB /* FilterCalnderHostView.swift */,
-				657319492F223662001785CB /* CalenderDatePickerView.swift */,
+				65916EEC2F23BBF8004CA035 /* DateSelectionView.swift */,
 				6573194E2F223696001785CB /* FilterCalenderView.swift */,
 			);
 			path = FilterCalender;
@@ -586,8 +583,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				005F93052EF3D5CA00315ED4 /* HomeView.swift in Sources */,
-				6573194B2F223662001785CB /* CalenderDatePickerView.swift in Sources */,
-				6573194D2F223662001785CB /* FilterCalnderHostView.swift in Sources */,
 				006349AA2F18EDB2006CD4D8 /* ShipmentsViewModel.swift in Sources */,
 				00694E2A2EF27B280008927D /* LoginView.swift in Sources */,
 				005F93022EF3D3CF00315ED4 /* DataManager.swift in Sources */,
@@ -604,6 +599,7 @@
 				00D280F52F14CC48005431BE /* VerifyOTPModel.swift in Sources */,
 				00CEB54E2F1E0A2200AEC660 /* AppDelegate.swift in Sources */,
 				007F1FC82F1614FE00604DD1 /* SideMenuView.swift in Sources */,
+				65916EED2F23BC07004CA035 /* DateSelectionView.swift in Sources */,
 				00D280F62F14CC48005431BE /* ResetPasswordModel.swift in Sources */,
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				006349A42F18E8F4006CD4D8 /* QuestionnaireBoolView.swift in Sources */,
