@@ -18,7 +18,7 @@ final class AppRootManager: ObservableObject {
         case login
         case mainView
         case filterCalender
-    }
+   }
 
      func push(_ route: Route) {
          path.append(route)

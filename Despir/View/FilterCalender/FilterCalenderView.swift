@@ -37,9 +37,9 @@ struct FilterCalenderView: View {
     public var body: some View {
         VStack(spacing: 16) {
 
-            Text("Select Date Range")
-                .font(.title2)
-                .fontWeight(.semibold)
+//            Text("Select Date Range")
+//                .font(.title2)
+//                .fontWeight(.semibold)
 
             VStack(spacing: 8) {
 
@@ -47,13 +47,11 @@ struct FilterCalenderView: View {
                 if showCalendar {
                     calendarView
                     //    .transition(.opacity.combined(with: .move(edge: .top)))
-                        .transition(.blurReplace)
+                    //    .transition(.blurReplace)
                 }
             }
-
-            Spacer()
         }
-        .animation(.smooth, value: showCalendar)
+      //  .animation(.smooth, value: showCalendar)
     }
 }
 
