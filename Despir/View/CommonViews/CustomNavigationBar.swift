@@ -38,8 +38,8 @@ struct CustomNavigationBar: View {
 
             // Title
             Text(title)
-                .font(.headline)
-                .foregroundColor(.black)
+              .font(.poppinsSemiBold(size: 16))
+              .foregroundColor(.black)
 
             Spacer()
 

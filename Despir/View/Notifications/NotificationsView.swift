@@ -11,6 +11,9 @@ struct NotificationsView: View {
     var body: some View {
       VStack {
         CustomNavigationBar(title: "Notifications", showBack: false, showLogo: true)
+        VStack {
+          Spacer()
+        }
         Spacer()
       }
     }

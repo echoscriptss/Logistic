@@ -27,8 +27,8 @@ enum Tab: String, CaseIterable {
       switch self {
       case .dashboard: return AppIcons.dashboardSelected
       case .shipments: return AppIcons.shipmentsSelected
-      case .notifications: return AppIcons.notifications
-      case .accounts: return AppIcons.accounts
+      case .notifications: return AppIcons.notificationsSelected
+      case .accounts: return AppIcons.accountSelected
       }
   }
   
@@ -68,7 +68,6 @@ struct CustomTabbar: View {
                      ZStack(alignment: .topTrailing) {
                        
                        Image(selectedTab == tab ? tab.selectedIcon : tab.icon)
-                         .font(.system(size: 22))
                        
                        if tab.supportsBadge {
                            BadgeView(count: notificationCount)
