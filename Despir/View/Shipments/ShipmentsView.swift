@@ -8,21 +8,29 @@
 import SwiftUI
 
 struct ShipmentsView: View {
+    @State private var showFilter = false
+
     var body: some View {
-      VStack {
-        CustomNavigationBar(title: "Shipments", showBack: false, showLogo: true)
-        Spacer().frame(height: 10)
-        HStack {
-          Spacer()
-          Button(action: {
-              
-          }) {
-            Image(AppIcons.filter)
-          }
-          Spacer().frame(width: 10)
+        ZStack{
+        VStack {
+            CustomNavigationBar(title: "Shipments", showBack: false, showLogo: true)
+            Spacer().frame(height: 10)
+            HStack {
+                Spacer()
+                Button(action: {
+                    showFilter = true
+                    
+                }) {
+                    Image(AppIcons.filter)
+                }
+                Spacer().frame(width: 10)
+            }
+            Spacer()
         }
-        Spacer()
-      }
+    }
+        .sheet(isPresented: $showFilter) {
+            FilterView(isPresented: $showFilter)
+        }
     }
 }
 
