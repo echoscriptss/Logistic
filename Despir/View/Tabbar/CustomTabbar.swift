@@ -77,15 +77,15 @@ struct CustomTabbar: View {
                        }
                      }
                      Text(tab.rawValue)
-                       .font(.system(size: 12))
+                       .font(selectedTab == tab ? .poppinsMedium(size: 12) : .poppinsRegular(size: 12))
                    }
-                   .foregroundColor(selectedTab == tab ? .white : .black.opacity(0.6))
+                   .foregroundStyle(selectedTab == tab ? .white : Color(hex: ColorConstants.textColor))
                    .frame(maxWidth: .infinity)
                    .onTapGesture {
                      selectedTab = tab
                    }
                  Spacer().frame(height: 10)
-               } .background(selectedTab == tab ? .black : .white)
+               } .background(selectedTab == tab ? Color(hex: ColorConstants.appBlueSelectColor) : .white)
                  .cornerRadius(10)
              }
            Spacer().frame(width: 10)
@@ -100,7 +100,7 @@ struct MainTabView: View {
 
     @State private var selectedTab: Tab = .dashboard
     @EnvironmentObject var tabBarController: TabBarController
-    @State private var notificationCount = 5 // dynamic
+    @State private var notificationCount = 0 // dynamic
   
     var body: some View {
         VStack(spacing: 0) {

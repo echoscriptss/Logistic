@@ -26,7 +26,7 @@ struct AsyncActionButton<Label: View>: View {
             Spacer()
           }
         }  .frame(height: 50)
-          .background(Color.black.opacity(0.6))
+          .background(Color(hex: ColorConstants.appBlueSelectColor))
           .cornerRadius(8)
         Spacer().frame(width: 20)
       }
