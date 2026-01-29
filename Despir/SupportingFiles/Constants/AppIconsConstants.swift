@@ -26,5 +26,6 @@ enum AppIcons {
   static let contactUs = "contactUs"
   static let notificationsSelected = "notificationsSelected"
   static let accountSelected = "accountSelected"
-
+  static let passInvalid = "passInvalid"
+  static let passValid = "passValid"
 }

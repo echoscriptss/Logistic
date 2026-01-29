@@ -142,8 +142,8 @@ struct FilterView: View {
             .position(
                 x: frameData.frame.midX,
                 y: frameData.direction == .down
-                    ? frameData.frame.maxY + 115
-                    : frameData.frame.minY - 115
+                    ? frameData.frame.maxY + 80
+                    : frameData.frame.minY - 80
             )
             .zIndex(3000)
         }

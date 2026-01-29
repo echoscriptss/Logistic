@@ -30,6 +30,9 @@
 		0069BA222F0D51CE0059A012 /* VerifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069BA212F0D51CE0059A012 /* VerifyViewModel.swift */; };
 		0069BA242F0D52370059A012 /* VerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069BA232F0D52370059A012 /* VerifyModel.swift */; };
 		006C2D082F22210800A86BA5 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C2D072F22210800A86BA5 /* CustomNavigationBar.swift */; };
+		007156B12F2B2FC10052FE88 /* PasswordValidatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007156B02F2B2FC10052FE88 /* PasswordValidatorView.swift */; };
+		007156B32F2B30200052FE88 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007156B22F2B30200052FE88 /* MessageConstants.swift */; };
+		007156B52F2B341A0052FE88 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007156B42F2B341A0052FE88 /* StringExtention.swift */; };
 		00745DE22F28CEDD007633B3 /* ShipmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00745DE12F28CEDD007633B3 /* ShipmentsView.swift */; };
 		00745DE42F28CF02007633B3 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00745DE32F28CF02007633B3 /* NotificationsView.swift */; };
 		00745DE62F28CF0D007633B3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00745DE52F28CF0D007633B3 /* AccountView.swift */; };
@@ -123,6 +126,9 @@
 		0069BA212F0D51CE0059A012 /* VerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewModel.swift; sourceTree = "<group>"; };
 		0069BA232F0D52370059A012 /* VerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyModel.swift; sourceTree = "<group>"; };
 		006C2D072F22210800A86BA5 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		007156B02F2B2FC10052FE88 /* PasswordValidatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorView.swift; sourceTree = "<group>"; };
+		007156B22F2B30200052FE88 /* MessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
+		007156B42F2B341A0052FE88 /* StringExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 		00745DE12F28CEDD007633B3 /* ShipmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentsView.swift; sourceTree = "<group>"; };
 		00745DE32F28CF02007633B3 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		00745DE52F28CF0D007633B3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -421,6 +427,7 @@
 			children = (
 				007E01152F29DD2B00F6E4DF /* ColorExtension.swift */,
 				007E01172F29E08400F6E4DF /* FontExtension.swift */,
+				007156B42F2B341A0052FE88 /* StringExtention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -451,6 +458,7 @@
 			children = (
 				00CEB55D2F1E6E2300AEC660 /* AppIconsConstants.swift */,
 				007E01122F29DB4400F6E4DF /* ColorConstants.swift */,
+				007156B22F2B30200052FE88 /* MessageConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -521,6 +529,7 @@
 				006349A32F18E8F4006CD4D8 /* QuestionnaireTextView.swift */,
 				00CEB55B2F1E6CE300AEC660 /* CustomTestField.swift */,
 				006C2D072F22210800A86BA5 /* CustomNavigationBar.swift */,
+				007156B02F2B2FC10052FE88 /* PasswordValidatorView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -687,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007E01182F29E08400F6E4DF /* FontExtension.swift in Sources */,
+				007156B52F2B341A0052FE88 /* StringExtention.swift in Sources */,
 				005F93052EF3D5CA00315ED4 /* Dashboard.swift in Sources */,
 				006349AA2F18EDB2006CD4D8 /* ShipmentsViewModel.swift in Sources */,
 				EC7FC7832F2A847200200E6E /* FloatingLabelDropdown.swift in Sources */,
@@ -713,6 +723,7 @@
 				005F93002EF3CDEA00315ED4 /* UserModel.swift in Sources */,
 				00745DE62F28CF0D007633B3 /* AccountView.swift in Sources */,
 				00745DE22F28CEDD007633B3 /* ShipmentsView.swift in Sources */,
+				007156B32F2B30200052FE88 /* MessageConstants.swift in Sources */,
 				006349A42F18E8F4006CD4D8 /* QuestionnaireBoolView.swift in Sources */,
 				006349A52F18E8F4006CD4D8 /* QuestionnaireTextView.swift in Sources */,
 				00CEB55C2F1E6CE300AEC660 /* CustomTestField.swift in Sources */,
@@ -723,6 +734,7 @@
 				006349A72F18E8F4006CD4D8 /* QuestionnaireDropdownView.swift in Sources */,
 				00694E362EF27BFD0008927D /* Utils.swift in Sources */,
 				EC9BD2892F0E843300B4611A /* ForgotPasswordViewModel.swift in Sources */,
+				007156B12F2B2FC10052FE88 /* PasswordValidatorView.swift in Sources */,
 				00D875462EF92D450032D020 /* LoginViewModel.swift in Sources */,
 				EC9BD2862F0E721A00B4611A /* AsyncActionButton.swift in Sources */,
 				002A94842F0FA9A2008816B6 /* ChangePasswordVM.swift in Sources */,

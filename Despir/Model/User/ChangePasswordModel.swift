@@ -20,3 +20,8 @@ struct ChangePasswordResponseModel: Decodable {
   let message: String?
   let statusCode: Int?
 }
+
+struct ValidationResult {
+    var success: Bool = false
+    var errorMessage: String?
+}

@@ -46,12 +46,13 @@ struct LoginView: View {
               }
             Spacer().frame(width: 20)
           }
+          Spacer().frame(height: 30)
           HStack {
             Spacer().frame(width: 20)
             CustomSecureTestField(title: " Password ", icon: AppIcons.password, text: $password, isValid: .constant(true))
             Spacer().frame(width: 20)
           }
-         
+          Spacer().frame(height: 40)
             AsyncActionButton {
               Task {
                 await viewModel.callLoginApi(email: username, password: password)
@@ -71,7 +72,7 @@ struct LoginView: View {
           } label: {
             Text("Forgot Password?")
               .underline()
-              .foregroundColor(.black.opacity(0.6))
+              .foregroundStyle(Color(hex: ColorConstants.appBlueSelectColor))
           }
           
             .alert("Error", isPresented: $viewModel.showAlert) {
@@ -81,6 +82,7 @@ struct LoginView: View {
             }
             
             Spacer()
+          Spacer().frame(height: 20)
         }
         .navigationDestination(for: Route.self) { route in
             if route == .verification {

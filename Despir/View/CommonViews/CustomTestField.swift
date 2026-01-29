@@ -29,7 +29,7 @@ struct CustomTestField: View {
             Spacer().frame(width: isFocused || !text.isEmpty ? 18 : 40)
             Text(title)
               .foregroundColor(isFocused || !text.isEmpty ? .black.opacity(0.6) : .black.opacity(0.6))
-              .font(isFocused || !text.isEmpty ? .body : .body)
+              .font(isFocused || !text.isEmpty ? .poppinsRegular(size: 16) : .poppinsRegular(size: 16))
               .background(Color(.systemBackground))
               .offset(y: isFocused || !text.isEmpty ? -28 : 0)
               .animation(.easeInOut(duration: 0.2), value: isFocused || !text.isEmpty)
@@ -67,7 +67,8 @@ struct CustomSecureTestField: View {
     @Binding var isValid: Bool
     @FocusState private var isFocused: Bool
     @State private var isSecure: Bool = true
-  
+    @State var isShowHide: Bool = true
+
     var body: some View {
         ZStack(alignment: .leading) {
 
@@ -81,7 +82,7 @@ struct CustomSecureTestField: View {
             Spacer().frame(width: isFocused || !text.isEmpty ? 18 : 40)
             Text(title)
               .foregroundColor(isFocused || !text.isEmpty ? .black.opacity(0.6) : .black.opacity(0.6))
-              .font(isFocused || !text.isEmpty ? .body : .body)
+              .font(isFocused || !text.isEmpty ? .poppinsRegular(size: 16) : .poppinsRegular(size: 16))
               .background(Color(.systemBackground))
               .offset(y: isFocused || !text.isEmpty ? -28 : 0)
               .animation(.easeInOut(duration: 0.2), value: isFocused || !text.isEmpty)
@@ -105,16 +106,19 @@ struct CustomSecureTestField: View {
                   .focused($isFocused)
 
               }
-              HStack {
-                Spacer().frame(width: 12)
-                Button {
-                  isSecure = !isSecure
-                } label: {
-                  Text(isSecure ? "SHOW" : "HIDE")
-                    .foregroundColor( .black.opacity(0.6))
-                  //Image(isSecure ? AppIcons.eye: AppIcons.eye)
+              if isShowHide {
+                HStack {
+                  Spacer().frame(width: 12)
+                  Button {
+                    isSecure = !isSecure
+                  } label: {
+                    Text(isSecure ? "SHOW" : "HIDE")
+                      .foregroundColor( .black.opacity(0.6))
+                      .font(isFocused || !text.isEmpty ? .poppinsRegular(size: 16) : .poppinsRegular(size: 16))
+                    //Image(isSecure ? AppIcons.eye: AppIcons.eye)
+                  }
+                  Spacer().frame(width: 12)
                 }
-                Spacer().frame(width: 12)
               }
             }
         }

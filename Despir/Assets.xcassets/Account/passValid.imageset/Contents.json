@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 1000005307.png",
+      "filename" : "tick_circle.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 1000005307@2x.png",
+      "filename" : "tick_circle@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 1000005307@3x.png",
+      "filename" : "tick_circle@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
